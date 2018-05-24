@@ -12,5 +12,13 @@ BIG_SHOT = 2.8
 
 
 led6.off()
+led13.off()
+led19.off()
+led26.off()
 
-time.sleep()
+time.sleep(2)
+
+led6.on()
+led13.on()
+led19.on()
+led26.on()
