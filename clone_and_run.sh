@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone https://github.com/jwerak/__.git
+git pull https://github.com/jwerak/__.git
 
 cd __
 python dunder.py
