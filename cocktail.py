@@ -22,6 +22,7 @@ def turn_off():
     led13.off()
     led19.off()
     led26.off()
+    time.sleep(5)
 
 
 def turn_on():
@@ -29,6 +30,7 @@ def turn_on():
     led13.on()
     led19.on()
     led26.on()
+    time.sleep(5)
 
 
 def pump_ingredients(name, duration):
@@ -61,7 +63,7 @@ def drinks():
 def ingredients():
     ing = []
     for r in receipts:
-        for i in r:
+        for i in receipts[r]:
             ing.append(i[0])
     return ing
 
@@ -72,8 +74,8 @@ def serve_drink(name):
         pump_ingredients(ingredients[0], ingredients[1])
 
 
+print("Ready to prepare these drinks:")
 print drinks()
+print("from these ingredients")
 print ingredients()
 turn_off()
-serve_drink('cubalibre')
-serve_drink("gintonic")
