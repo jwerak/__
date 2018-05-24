@@ -2,8 +2,8 @@
 
 
 def ServeDrink(name):
-    print("Serving drink: {0}".format(name))
+    print('Serving drink: {0}'.format(name))
 
 
-if __name__ == "__main__":
-    ServeDrink("Virgin cuba libre")
+if __name__ == '__main__':
+    ServeDrink('Virgin cuba libre')
