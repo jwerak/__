@@ -1,6 +1,7 @@
 #!/usr/bin/env python2
 
 from gpiozero import  OutputDevice
+import time
 
 led6 = OutputDevice(6)
 led13 = OutputDevice(13)
