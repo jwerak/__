@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from cocktail_dummy import ServeDrink
+import cocktail
 
 import os
 import time
@@ -49,6 +49,7 @@ class CommandExecutor(object):
         return response
 
     def serve(self, name):
+        cocktail.serve_drink(name)
         return "Your {0} is ready, enjoy!".format(name)
 
     def help(self):
