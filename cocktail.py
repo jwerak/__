@@ -61,7 +61,7 @@ def drinks():
 def ingredients():
     ing = []
     for r in receipts:
-        for i in r:
+        for i in receipts[r]:
             ing.append(i[0])
     return ing
 
@@ -75,5 +75,3 @@ def serve_drink(name):
 print drinks()
 print ingredients()
 turn_off()
-serve_drink('cubalibre')
-serve_drink("gintonic")
