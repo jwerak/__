@@ -18,5 +18,6 @@ Dunder
 ### Run dunder ###
 
 ```bash
-./dunder.py
+export SLACK_BOT_TOKEN=<BOT_TOKEN>
+./slackbot.py
 ```
