@@ -18,5 +18,5 @@ Dunder
 ### Run dunder ###
 
 ```bash
-python dunder.py
+./dunder.py
 ```

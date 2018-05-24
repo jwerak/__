@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 
-from giopzero import  OutputDevice
+from gpiozero import  OutputDevice
 
 led6 = OutputDevice(6)
 led13 = OutputDevice(13)
