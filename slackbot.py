@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import cocktail
+from cocktail import serve_drink
 
 import os
 import time
@@ -40,17 +40,24 @@ class CommandExecutor(object):
 
     def handle_command(self, command):
         response = ""
+        cmd_list = command.split(" ")
+        cmd = cmd_list[0]
+        cmd_args = []
 
-        if command in self.commands:
-            response += self.commands[command]()
+        if len(cmd_list) > 1:
+            cmd_args = cmd_list[1:]
+
+        if cmd in self.commands:
+            response += self.commands[cmd](cmd_args)
         else:
             response += "Sorry I don't understand the command: " + command + ". " + self.help()
 
         return response
 
     def serve(self, name):
-        cocktail.serve_drink(name)
-        return "Your {0} is ready, enjoy!".format(name)
+        drink_name = name[0]
+        serve_drink(drink_name)
+        return "Your {0} is ready, enjoy!".format(drink_name)
 
     def help(self):
         response = "Currently I support the following commands:\r\n"
