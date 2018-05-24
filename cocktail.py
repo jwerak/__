@@ -18,14 +18,6 @@ receipts = {
 
 
 def turn_off():
-    led6.off()
-    led13.off()
-    led19.off()
-    led26.off()
-    time.sleep(5)
-
-
-def turn_on():
     led6.on()
     led13.on()
     led19.on()
@@ -33,27 +25,35 @@ def turn_on():
     time.sleep(5)
 
 
+def turn_on():
+    led6.off()
+    led13.off()
+    led19.off()
+    led26.off()
+    time.sleep(5)
+
+
 def pump_ingredients(name, duration):
     if name == 'rum':
         print "Rum for {} seconds".format(duration)
-        led6.on()
-        time.sleep(duration)
         led6.off()
+        time.sleep(duration)
+        led6.on()
     if name == 'cola':
         print "Cola for {} seconds".format(duration)
-        led13.on()
-        time.sleep(duration)
         led13.off()
+        time.sleep(duration)
+        led13.on()
     if name == 'gin':
         print "Gin for {} seconds".format(duration)
-        led19.on()
-        time.sleep(duration)
         led19.off()
+        time.sleep(duration)
+        led19.on()
     if name == 'tonic':
         print "Tonic for {} seconds".format(duration)
-        led26.on()
-        time.sleep(duration)
         led26.off()
+        time.sleep(duration)
+        led26.on()
 
 
 def drinks():
