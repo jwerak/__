@@ -12,17 +12,17 @@ class Ingredient(OutputDevice):
 
     def infuse(self, seconds):
         print('Infusing {} ({}) for {} seconds', self.name, self.pin, seconds)
-        self.on()
-        time.sleep(seconds)
         self.off()
+        time.sleep(seconds)
+        self.on()
         print('Infusion of {} completed', self.name)
 
 
 _ingredients = [
-    Ingredient('rum', pin=6, active_high=False),
-    Ingredient('cola', pin=13, active_high=False),
-    Ingredient('gin', pin=19, active_high=False),
-    Ingredient('tonic', pin=26, active_high=False)]
+    Ingredient('rum', pin=6),
+    Ingredient('cola', pin=13),
+    Ingredient('gin', pin=19),
+    Ingredient('tonic', pin=26)]
 
 
 _receipts = {
@@ -32,12 +32,12 @@ _receipts = {
 
 def _all_off():
     for i in _ingredients:
-        i.off()
+        i.on()
 
 
 def _all_on():
     for i in _ingredients:
-        i.on()
+        i.off()
 
 
 def drinks():
