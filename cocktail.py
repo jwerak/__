@@ -19,10 +19,6 @@ class Ingredient(OutputDevice):
 
 
 _ingredients = [
-    Ingredient('rum', pin=6, active_high=False),
-    Ingredient('cola', pin=13, active_high=False),
-    Ingredient('gin', pin=19, active_high=False),
-    Ingredient('tonic', pin=26, active_high=False)]
     Ingredient('rum', pin=6),
     Ingredient('cola', pin=13),
     Ingredient('gin', pin=19),
