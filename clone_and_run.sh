@@ -10,4 +10,4 @@ else
   echo "Secret file not found at location: ${SECRETS_FILE}"
 fi
 
-python dunder.py
+python slackbot.py
