@@ -49,8 +49,12 @@ def ingredients():
 
 
 def serve_drink(name):
+    if name not in _receipts.keys():
+        print('Unknown drink {}'.format(name))
+        return
     print('Serving drink: {0}'.format(name))
     for ingredient, duration in _receipts[name]:
+        print('Ingredient {} duration {}'.format(ingredient, duration))
         for i in [i for i in _ingredients if i.name == name]:
             i.infuse(duration)
 
