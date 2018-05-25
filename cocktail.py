@@ -19,10 +19,10 @@ class Ingredient(OutputDevice):
 
 
 _ingredients = [
-    Ingredient('rum', pin=6, initial_value=False),
-    Ingredient('cola', pin=13, initial_value=False),
-    Ingredient('gin', pin=19, initial_value=False),
-    Ingredient('tonic', pin=26, initial_value=False)]
+    Ingredient('rum', pin=6, active_high=False),
+    Ingredient('cola', pin=13, active_high=False),
+    Ingredient('gin', pin=19, active_high=False),
+    Ingredient('tonic', pin=26, active_high=False)]
 
 
 _receipts = {
