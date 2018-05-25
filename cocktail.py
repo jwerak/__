@@ -11,11 +11,13 @@ class Ingredient(OutputDevice):
         super(Ingredient, self).__init__(*args, **kwargs)
 
     def infuse(self, seconds):
-        print('Infusing {} ({}) for {} seconds', self.name, self.pin, seconds)
+        print(
+            'Infusing {} ({}) for {} seconds'.format(
+                self.name, self.pin, seconds))
         self.off()
         time.sleep(seconds)
         self.on()
-        print('Infusion of {} completed', self.name)
+        print('Infusion of {} completed'.format(self.name))
 
 
 _ingredients = [
