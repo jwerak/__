@@ -23,6 +23,10 @@ _ingredients = [
     Ingredient('cola', pin=13, active_high=False),
     Ingredient('gin', pin=19, active_high=False),
     Ingredient('tonic', pin=26, active_high=False)]
+    Ingredient('rum', pin=6),
+    Ingredient('cola', pin=13),
+    Ingredient('gin', pin=19),
+    Ingredient('tonic', pin=26)]
 
 
 _receipts = {
@@ -55,7 +59,8 @@ def serve_drink(name):
     print('Serving drink: {0}'.format(name))
     for ingredient, duration in _receipts[name]:
         print('Ingredient {} duration {}'.format(ingredient, duration))
-        for i in [i for i in _ingredients if i.name == name]:
+        for i in [item for item in _ingredients if item.name == name]:
+            print('Found {} on {}'.format(i.name, i.pin))
             i.infuse(duration)
 
 
