@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from cocktail_dummy import serve_drink, drinks
+from cocktail import serve_drink, drinks
 
 import os
 import time
