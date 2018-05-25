@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from cocktail import serve_drink
+from cocktail_dummy import serve_drink, drinks
 
 import os
 import time
@@ -27,7 +27,7 @@ def main():
 
 class CommandExecutor(object):
     def __init__(self):
-        self.commands = {'serve': self.serve, 'help': self.help}
+        self.commands = {'read_menu': self.read_menu, 'serve': self.serve, 'help': self.help}
 
     def handle_command(self, command):
         response = ''
@@ -51,6 +51,13 @@ class CommandExecutor(object):
         drink_name = name[0]
         serve_drink(drink_name)
         return 'Your {0} is ready, enjoy!'.format(drink_name)
+
+    def read_menu(self, name):
+        response = 'You can order one of these drinks:\r\n'
+        receipts = drinks()
+
+        return response + '\r\n'.join(receipts.keys())
+
 
     def help(self):
         response = 'Currently I support the following commands:\r\n'
