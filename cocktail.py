@@ -55,7 +55,7 @@ def serve_drink(name):
     print('Serving drink: {0}'.format(name))
     for ingredient, duration in _receipts[name]:
         print('Ingredient {} duration {}'.format(ingredient, duration))
-        for i in [item for item in _ingredients if item.name == name]:
+        for i in [item for item in _ingredients if item.name == ingredient]:
             print('Found {} on {}'.format(i.name, i.pin))
             i.infuse(duration)
 
